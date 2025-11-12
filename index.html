@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ishaan's Weather App — Open-Meteo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">WEATHER APP</div>
+
+    <div class="controls">
+      <div class="dropdown" id="howTo">
+        <button class="secondary" id="howBtn">How To Use ▾</button>
+        <div class="menu" aria-hidden="true">
+          <a href="#" class="city-option" data-city="Delhi">Delhi</a>
+          <a href="#" class="city-option" data-city="Mumbai">Mumbai</a>
+          <a href="#" class="city-option" data-city="Chennai">Chennai</a>
+        </div>
+      </div>
+
+      <input id="citySearch" type="search" placeholder="Type city name (e.g. Bengaluru)" />
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="card big" id="mainCard">
+        <div>
+          <div class="city-name" id="cityTitle">Search for a city</div>
+          <div class="meta" id="cityMeta">Type a city name or pick one from "How To Use"</div>
+          <div class="rows" style="margin-top:8px;">
+            <div class="small" id="tempBox">Temp —</div>
+            <div class="small" id="windBox">Wind —</div>
+            <div class="small" id="timeBox">Time —</div>
+          </div>
+        </div>
+
+        <div style="text-align:right;">
+          <div class="temp" id="tempBig">— °C</div>
+          <div class="meta" id="description">—</div>
+        </div>
+      </div>
+
+      <div class="card" style="min-width:220px;">
+        <h4 style="margin:0 0 12px;">Quick Tips</h4>
+        <p class="meta" style="margin:0 0 12px;">
+          Use the search to fetch current weather for any city worldwide.<br>
+          Click preset cities inside <strong>How To Use</strong> to auto-load them.
+        </p>
+        <button id="useMyLocation">Use My Location</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">OTHER CITIES</h2>
+    <div class="card" style="padding:8px 18px 20px;">
+      <table id="otherTable">
+        <thead>
+          <tr>
+            <th>City</th>
+            <th>Temperature (°C)</th>
+            <th>Wind (km/h)</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <strong>© Ishaan’s App</strong> — All Rights Reserved<br>
+      Made with ❤️ love and ☕ coffee in India 🇮🇳
+    </p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
